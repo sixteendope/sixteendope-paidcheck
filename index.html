@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru" data-theme="light">
+<html lang="ru" data-theme="light" class="lock">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -74,7 +74,7 @@ body{font-family:-apple-system,"SF Pro Text","Helvetica Neue",system-ui,sans-ser
 .rb{width:46px;height:46px;border:0;background:var(--card);transition:transform .4s cubic-bezier(.34,1.56,.64,1),background-color .15s}
 .rb:active{transform:scale(.86)}
 .hero{border-radius:32px;padding:24px;box-shadow:inset 0 1.5px 1px rgba(255,255,255,.3),inset 0 0 0 .5px rgba(255,255,255,.12);transition:background-color .15s}
-.hero.a{animation:up .8s cubic-bezier(.2,.8,.2,1) 80ms forwards,glow 1.8s ease-out .5s}
+.hero.a{animation:up 1.1s cubic-bezier(.22,1,.36,1) 60ms forwards,glow 2s ease-out .6s}
 @keyframes glow{0%{box-shadow:0 0 0 0 transparent}35%{box-shadow:0 0 52px 10px color-mix(in srgb,var(--hero) 38%,transparent)}100%{box-shadow:0 0 0 0 transparent}}
 .lb{text-transform:none;letter-spacing:.2px;font-size:14px;font-weight:600}
 .hero .lb{color:color-mix(in srgb,var(--heroink) 55%,transparent)}
@@ -100,9 +100,9 @@ h2{font-size:17px;font-weight:700}
 .vx{opacity:0!important;transform:translateY(10px)}
 #v-home:not(.hide){display:flex;flex-direction:column;min-height:calc(100dvh - 175px)}
 #v-home>.hero,#v-home>.card{flex:none}
-.ve>*{animation:rise .6s cubic-bezier(.2,.8,.2,1) both!important}
-.ve>*:nth-child(2){animation-delay:.07s!important}.ve>*:nth-child(3){animation-delay:.14s!important}.ve>*:nth-child(4){animation-delay:.21s!important}
-@keyframes rise{from{opacity:0;transform:translateY(16px)}}
+.ve>*{animation:rise .8s cubic-bezier(.22,1,.36,1) both!important}
+.ve>*:nth-child(2){animation-delay:.09s!important}.ve>*:nth-child(3){animation-delay:.18s!important}.ve>*:nth-child(4){animation-delay:.27s!important}
+@keyframes rise{from{opacity:0;transform:translateY(12px)}}
 .card:has(.cw){padding:16px 18px}.card:has(.cw) h2{margin:0 0 8px}
 .cw{display:flex;gap:14px;align-items:center;height:142px}
 .cw .cv{width:130px;height:130px;flex:none}
@@ -114,9 +114,9 @@ h2{font-size:17px;font-weight:700}
 .nav{flex:1;min-height:90px;display:flex;align-items:center;justify-content:space-between;padding:0 6px}
 .nl{border:0;background:none;color:var(--ink);font:600 22px -apple-system,system-ui,sans-serif;letter-spacing:-.2px;padding:14px 8px;transition:opacity .2s}
 .nl:active{opacity:.55}
-.nav.f .nl{opacity:0;animation:nlr .7s cubic-bezier(.2,.8,.2,1) .1s forwards,nlg 2s ease-out .1s}
-.nav.f .nl+.nl{animation-delay:.2s,.2s}
-@keyframes nlr{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+.nav.f .nl{opacity:0;animation:nlr 1.2s cubic-bezier(.22,1,.36,1) .2s forwards,nlg 2.4s ease-out .35s}
+.nav.f .nl+.nl{animation-delay:.35s,.5s}
+@keyframes nlr{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
 @keyframes nlg{0%{text-shadow:0 0 0 transparent}40%{text-shadow:0 0 18px color-mix(in srgb,var(--ink) 85%,transparent),0 0 42px color-mix(in srgb,var(--ink) 45%,transparent)}100%{text-shadow:0 0 0 transparent}}
 .bk{display:inline-flex;align-items:center;gap:2px;border:0;background:var(--card);color:var(--ink);font:600 16px -apple-system,system-ui,sans-serif;padding:10px 16px 10px 10px;border-radius:999px;margin-bottom:14px;transition:transform .4s cubic-bezier(.34,1.56,.64,1)}
 .bk:active{transform:scale(.94)}
@@ -126,12 +126,12 @@ h2{font-size:17px;font-weight:700}
 *{-webkit-tap-highlight-color:transparent}
 button{-webkit-touch-callout:none;-webkit-user-select:none;user-select:none}
 .bk{position:relative;z-index:2}
-.chips{margin:-24px -20px -18px;padding:28px 24px 32px}
+.chips{margin:-24px -16px -18px;padding:28px 16px 32px;touch-action:pan-x pan-y}
 .chip.on{box-shadow:0 0 18px 2px color-mix(in srgb,var(--ink) 38%,transparent);animation:chg .9s ease-out}
 @keyframes chg{0%{box-shadow:0 0 0 0 transparent}35%{box-shadow:0 0 24px 4px color-mix(in srgb,var(--ink) 50%,transparent)}100%{box-shadow:0 0 18px 2px color-mix(in srgb,var(--ink) 38%,transparent)}}
 #v-home:not(.hide){min-height:calc(100dvh - 250px)}
 #st:empty{display:none}
-#v-home.ve>.hero{animation:rise .6s cubic-bezier(.2,.8,.2,1) both,glow 1.8s ease-out .2s!important}
+#v-home.ve>.hero{animation:rise .8s cubic-bezier(.22,1,.36,1) both,glow 2s ease-out .25s!important}
 .card:has(.cw){cursor:pointer}
 .card:has(.cw):active{filter:brightness(.96)}
 .card:has(.cw) h2::after{content:"\203A";float:right;color:var(--mute);font-size:24px;line-height:.9;font-weight:500}
@@ -139,8 +139,24 @@ button{-webkit-touch-callout:none;-webkit-user-select:none;user-select:none}
 #v-stat h2{margin:0 0 6px}
 #v-stat .cv{height:124px}
 #v-stat .lg2{margin-top:4px}
-.cr{max-height:0;opacity:0;overflow:hidden;margin:0;transition:max-height .5s cubic-bezier(.4,0,.2,1),opacity .5s ease,margin .5s ease}
-.cr.on{max-height:40px;opacity:1;margin-top:26px}
+html,body{overflow-x:hidden;touch-action:pan-y;overscroll-behavior-x:none}
+html.lock,html.lock body{overflow:hidden;overscroll-behavior:none;touch-action:none}
+main{padding-bottom:24px}
+.nav{min-height:64px}
+.a{animation-duration:1.1s;animation-timing-function:cubic-bezier(.22,1,.36,1);animation-delay:calc(var(--i,0)*120ms)}
+@keyframes up{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.a,.nl{will-change:transform,opacity}
+#v-home.ve .nl{animation:nlg 2.4s ease-out .3s}
+.cw{height:140px}
+.cw .cv{width:140px;height:140px}
+.cgo{flex:1;display:flex;align-items:center;justify-content:flex-end;gap:2px;font-size:22px;font-weight:600;color:var(--ink)}
+#c4{position:relative;height:230px;margin:4px 0 18px}
+.dc{position:absolute;inset:0;display:grid;place-content:center;text-align:center;gap:2px}
+.dc b{font-weight:700}
+.dc small{color:var(--mute);font-size:14px;font-weight:600}
+.ct{text-align:center;font-size:22px;font-weight:700;margin:18px 0 4px}
+#pc .mu{text-align:center;padding-top:0}
+#cl .rt small{white-space:nowrap}
 </style>
 </head>
 <body>
@@ -157,7 +173,7 @@ button{-webkit-touch-callout:none;-webkit-user-select:none;user-select:none}
     <hr>
     <div class="cols"><div><div class="lb">доходы</div><b id="kI">0</b></div><div><div class="lb">расходы</div><b id="kE">0</b></div><div><div class="lb">отложено</div><b id="kS">0</b></div></div>
   </div>
-  <section class="card a" style="--i:2"><h2>расходы по категориям</h2><div class="cw"><div class="cv"><div id="c1" style="height:100%"></div></div><ul class="lg" id="lg"></ul></div></section>
+  <section class="card a" style="--i:2" data-v="cat"><div class="cw"><div class="cv"><div id="c1" style="height:100%"></div></div><div class="cgo">посмотреть<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></div></div></section>
   <div class="nav f" id="nav"><button class="nl" data-v="hist">история</button><button class="nl" data-v="stat">статистика</button></div>
 </div>
 <div id="v-hist" class="vw hide">
@@ -165,12 +181,24 @@ button{-webkit-touch-callout:none;-webkit-user-select:none;user-select:none}
   <div class="chips" id="chips"></div>
   <div id="lst"></div>
   <button class="pick2" id="all">посмотреть всю историю</button>
-  <p class="cr" id="hcr">sixteendope ©</p>
+  <p class="cr">sixteendope ©</p>
 </div>
 <div id="v-stat" class="vw hide">
   <button class="bk" data-v="home"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6l-6 6 6 6"/></svg>назад</button>
   <section class="card"><h2>доходы и расходы по месяцам</h2><div class="cv"><div id="c2" style="height:100%"></div></div><div class="lg2"><span><i style="background:var(--ink)"></i>доход</span><span><i style="background:var(--mute)"></i>расход</span></div></section>
   <section class="card"><h2>накопления</h2><div class="cv"><div id="c3" style="height:100%"></div></div></section>
+  <p class="cr">sixteendope ©</p>
+</div>
+<div id="v-cat" class="vw hide">
+  <button class="bk" data-v="home"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6l-6 6 6 6"/></svg>назад</button>
+  <div id="c4"></div>
+  <div id="cl"></div>
+  <p class="cr">sixteendope ©</p>
+</div>
+<div id="v-pct" class="vw hide">
+  <button class="bk" data-v="home"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6l-6 6 6 6"/></svg>назад</button>
+  <div id="pc"></div>
+  <p class="cr">sixteendope ©</p>
 </div>
 </div></div>
 <section id="imp" class="card hide">
@@ -189,7 +217,7 @@ const RM=matchMedia('(prefers-reduced-motion:reduce)').matches;
 const cap=s=>s[0].toUpperCase()+s.slice(1);
 const esc=s=>s.replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const f=n=>n.toLocaleString('ru-RU',{minimumFractionDigits:2,maximumFractionDigits:2})+' Br';
-let rows=[],months=[],mi=0,cat='',charts={},first=true;
+let rows=[],months=[],mi=0,cat='',charts={},first=true,cv='home',gb=false;
 function dec(h){try{h=decodeURIComponent(h).replace(/\s/g,'').replace(/-/g,'+').replace(/_/g,'/');return new TextDecoder().decode(Uint8Array.from(atob(h),c=>c.charCodeAt(0)))}catch(e){return ''}}
 function pd(s){let m=s.match(/(\d{4})-(\d{2})-(\d{2})/);if(m)return new Date(+m[1],m[2]-1,+m[3]);m=s.match(/(\d{1,2})\s+([а-яё]+)\.?\s+(\d{4})/i);if(m){const P=['янв','фев','мар','апр','ма','июн','июл','авг','сен','окт','ноя','дек'];const k=P.findIndex(p=>m[2].toLowerCase().startsWith(p));if(k>=0)return new Date(+m[3],k,+m[1])}m=s.match(/(\d{1,2})[.\/](\d{1,2})[.\/](\d{2,4})/);if(m){let y=+m[3];if(y<100)y+=2000;return new Date(y,m[2]-1,+m[1])}return null}
 function parse(t){
@@ -235,13 +263,13 @@ function render(){
   cat='';PAL=dk()?['#f5f5f5','#c8c8cc','#9a9aa0','#6e6e73','#48484c','#303034']:['#0b0b0b','#3a3a3c','#636366','#8e8e93','#aeaeb2','#d1d1d6'];
   const cats={};cur.filter(r=>r.type==='e').forEach(r=>cats[r.cat]=(cats[r.cat]||0)+r.v);
   const ce=Object.entries(cats).sort((a,b)=>b[1]-a[1]);
-  $('#lg').innerHTML=ce.length?ce.map((c,i)=>`<li><i style="background:${PAL[i%PAL.length]}"></i><span>${esc(c[0])}</span><b>${f(c[1])}</b></li>`).join(''):'<li><span style="color:var(--mute)">расходов в этом месяце нет</span></li>';
   $('#chips').innerHTML=['Все',...allc()].map((c,i)=>`<button class="chip${i?'':' on'}" data-c="${i?esc(c):''}">${esc(cap(c))}</button>`).join('');
   list();
   const sh=months.map(x=>MN[+x.split('-')[1]-1].slice(0,3));
-  const C=2*Math.PI*70,tot=ce.reduce((a,c)=>a+c[1],0);let off=0;
-  $('#c1').innerHTML='<svg viewBox="0 0 200 200" style="height:100%;display:block;margin:auto"><g transform="rotate(-90 100 100)">'+(tot?ce.map((c,i)=>{const L=Math.max(c[1]/tot*C-(ce.length>1?4:0),1),o=off;off+=c[1]/tot*C;return `<circle cx="100" cy="100" r="70" fill="none" stroke="${PAL[i%PAL.length]}" stroke-width="28" stroke-dasharray="0 ${C}" stroke-dashoffset="${-o}" data-d="${L} ${C-L}" style="transition:stroke-dasharray 1.2s cubic-bezier(.2,.8,.2,1) ${i*120}ms"/>`}).join(''):'<circle cx="100" cy="100" r="70" fill="none" stroke="var(--chip)" stroke-width="28"/>')+'</g></svg>';
+  PAL=pal(ce.length);const tot=ce.reduce((a,c)=>a+c[1],0);
+  $('#c1').innerHTML=donut(ce,tot,PAL);
   setTimeout(()=>document.querySelectorAll('#c1 circle[data-d]').forEach(e=>e.style.strokeDasharray=e.dataset.d),60);
+  if(cv==='cat')drawCat();if(cv==='pct')drawPct();
   const iv=months.map(x=>sum(rows.filter(r=>key(r.d)===x),'i')),ev=months.map(x=>sum(rows.filter(r=>key(r.d)===x),'e'));
   const mx=Math.max(1,...iv,...ev),sl=300/months.length,bw=Math.min(24,sl/3);
   const bar=(x,v,fill,d)=>{const h=v>0?Math.max(v/mx*76,3):0;return `<rect class="bar" x="${x}" y="${96-h}" width="${bw}" height="${h}" rx="6" fill="${fill}" style="--d:${d}ms"/>`};
@@ -250,6 +278,31 @@ function render(){
   const lo=Math.min(0,...sv),hi=Math.max(1,...sv),px=i=>months.length>1?24+i*252/(months.length-1):150,py=v=>86-(v-lo)/(hi-lo)*64;
   const pts=sv.map((v,i)=>[px(i),py(v)]),dd='M'+pts.map(p=>p.join(' ')).join(' L');
   $('#c3').innerHTML='<svg viewBox="0 0 300 120" style="width:100%;height:100%"><line x1="0" y1="96.5" x2="300" y2="96.5" stroke="var(--line)"/><path class="fa" d="'+dd+' L'+pts[pts.length-1][0]+' 96 L'+pts[0][0]+' 96Z" fill="var(--chip)"/><path class="ln" pathLength="1" d="'+dd+'" fill="none" stroke="var(--mute)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>'+pts.map((p,i)=>`<circle class="fa" cx="${p[0]}" cy="${p[1]}" r="5" fill="var(--mute)"/><text class="tx" x="${p[0]}" y="114" text-anchor="middle">${sh[i]}</text>`).join('')+'</svg>';
+}
+function pal(n){n=Math.max(n,2);return Array.from({length:n},(_,i)=>{const a=dk()?245:11,b=dk()?56:209,v=Math.round(a+(b-a)*i/(n-1));return 'rgb('+v+','+v+','+v+')'})}
+function donut(ce,tot,P){const C=2*Math.PI*70;let off=0;return '<svg viewBox="0 0 200 200" style="height:100%;display:block;margin:auto"><g transform="rotate(-90 100 100)">'+(tot?ce.map((c,i)=>{const L=Math.max(c[1]/tot*C-(ce.length>1?4:0),1),o=off;off+=c[1]/tot*C;return `<circle cx="100" cy="100" r="70" fill="none" stroke="${P[i]}" stroke-width="28" stroke-dasharray="0 ${C}" stroke-dashoffset="${-o}" data-d="${L} ${C-L}" style="transition:stroke-dasharray 1.2s cubic-bezier(.2,.8,.2,1) ${i*90}ms"/>`}).join(''):'<circle cx="100" cy="100" r="70" fill="none" stroke="var(--chip)" stroke-width="28"/>')+'</g></svg>'}
+function drawCat(){
+  const m=months[mi],cur=rows.filter(r=>key(r.d)===m&&r.type==='e'),cats={};cur.forEach(r=>cats[r.cat]=(cats[r.cat]||0)+r.v);
+  const ce=Object.entries(cats).sort((a,b)=>b[1]-a[1]),tot=ce.reduce((a,c)=>a+c[1],0),P=pal(ce.length);
+  $('#c4').innerHTML=donut(ce,tot,P)+'<div class="dc"><b>'+f(tot)+'</b><small>'+MN[+m.split('-')[1]-1]+'</small></div>';
+  fitEl($('#c4 .dc b'),f(tot),20,11,112);
+  setTimeout(()=>document.querySelectorAll('#c4 circle[data-d]').forEach(e=>e.style.strokeDasharray=e.dataset.d),80);
+  let n=0;
+  $('#cl').innerHTML=ce.length?ce.map((c,i)=>{const w=tot?c[1]/tot*100:0,k=cur.filter(r=>r.cat===c[0]).length,tc=parseInt(P[i].slice(4))>140?'#000':'#fff';
+    return `<div class="row a" style="--i:${Math.min(n++,12)}"><div class="ic" style="background:${P[i]};color:${tc}">${esc(cap(c[0])[0])}</div><div class="rt"><b>${esc(cap(c[0]))}</b><small>${w.toFixed(1).replace('.',',')}%, чеков: ${k}</small></div><div class="am">${f(c[1])}</div></div>`}).join(''):'<p class="mu">расходов нет</p>';
+}
+function drawPct(){
+  const m=months[mi],cur=rows.filter(r=>key(r.d)===m);
+  const I=sum(cur,'i'),E=sum(cur,'e'),S=sum(cur,'s')-sum(cur,'w');
+  const base=I>0?I:E;
+  const p=v=>base?(v/base*100).toFixed(1).replace('.',',')+'%':'0%';
+  const rw=(n,v)=>`<div class="pr"><div class="pt"><span>${esc(n)}</span><b>${p(v)}</b></div><div class="bt"><div class="bf" data-w="${base?Math.max(0,Math.min(v/base*100,100)):0}"></div></div></div>`;
+  const cats={};cur.filter(r=>r.type==='e').forEach(r=>cats[r.cat]=(cats[r.cat]||0)+r.v);
+  let h='<h2 class="ct">траты в процентах от дохода</h2><p class="mu">'+MN[+m.split('-')[1]-1]+' '+m.split('-')[0]+'</p>';
+  if(!I)h+='<p class="mu">в этом месяце нет доходов, поэтому считаю от всех расходов</p>';
+  h+=Object.entries(cats).sort((a,b)=>b[1]-a[1]).map(c=>rw(c[0],c[1])).join('')||'<p class="mu">расходов нет</p>';
+  if(I)h+='<div class="sp2"></div>'+rw('отложено',S)+rw('осталось',I-E-S);
+  $('#pc').innerHTML=h;setTimeout(()=>document.querySelectorAll('#pc .bf').forEach(e=>e.style.width=e.dataset.w+'%'),60);
 }
 function allc(){const m={};rows.filter(r=>r.type==='e').forEach(r=>m[r.cat]=(m[r.cat]||0)+r.v);return Object.entries(m).sort((a,b)=>b[1]-a[1]).map(c=>c[0])}
 let full=false;
@@ -273,20 +326,7 @@ function sheet(h){$('#sc').innerHTML=h;$('#sh').classList.remove('hide');documen
 function shut(){$('#sh').classList.add('hide');document.body.style.overflow=''}
 $('#sv').onclick=shut;$('#sx').onclick=shut;
 $('#lst').onclick=e=>{const el=e.target.closest('.row');if(!el)return;const r=rows.find(x=>String(x.n)===el.dataset.n);if(r)sheet('<pre class="rc">'+esc(r.raw)+'</pre>')};
-function pct(){
-  const m=months[mi],cur=rows.filter(r=>key(r.d)===m);
-  const I=sum(cur,'i'),E=sum(cur,'e'),S=sum(cur,'s')-sum(cur,'w');
-  const base=I>0?I:E;
-  const p=v=>base?(v/base*100).toFixed(1).replace('.',',')+'%':'0%';
-  const rw=(n,v)=>`<div class="pr"><div class="pt"><span>${esc(n)}</span><b>${p(v)}</b></div><div class="bt"><div class="bf" data-w="${base?Math.max(0,Math.min(v/base*100,100)):0}"></div></div></div>`;
-  const cats={};cur.filter(r=>r.type==='e').forEach(r=>cats[r.cat]=(cats[r.cat]||0)+r.v);
-  let h='<h2>траты в процентах от дохода</h2><p class="mu" style="text-align:left;padding:0 0 4px">'+MN[+m.split('-')[1]-1]+' '+m.split('-')[0]+'</p>';
-  if(!I)h+='<p class="mu" style="text-align:left;padding:0">в этом месяце нет доходов, поэтому считаю от всех расходов</p>';
-  h+=Object.entries(cats).sort((a,b)=>b[1]-a[1]).map(c=>rw(c[0],c[1])).join('')||'<p class="mu">расходов нет</p>';
-  if(I)h+='<div class="sp2"></div>'+rw('отложено',S)+rw('осталось',I-E-S);
-  sheet(h);setTimeout(()=>document.querySelectorAll('.bf').forEach(e=>e.style.width=e.dataset.w+'%'),60);
-}
-$('#pb').onclick=()=>{if(rows.length)pct()};
+$('#pb').onclick=()=>{if(rows.length)go('pct')};
 function use(t){try{localStorage.setItem('fin',t)}catch(e){}load(t)}
 $('#file').onchange=e=>{const r=e.target.files[0];if(r)r.text().then(use)};
 let t=location.hash.length>1?dec(location.hash.slice(1)):'';
@@ -296,32 +336,25 @@ load(t);
 const hl=document.createElement('label');hl.style.cssText='position:fixed;left:-99px;top:0;opacity:0;pointer-events:none';const hi=document.createElement('input');hi.type='checkbox';hi.setAttribute('switch','');hl.appendChild(hi);document.body.appendChild(hl);
 const haptic=()=>{try{if(navigator.vibrate){navigator.vibrate(8);return}hl.click()}catch(e){}};
 document.addEventListener('click',e=>{if(e.target.closest('.chip,.row,.rb,.pick,.sv,.nl,.bk,.pick2,#v-home .card'))haptic()},true);
-let cv='home',gb=false;
 function swapList(fn){const l=$('#lst'),old=l.offsetHeight;l.style.height=old+'px';l.classList.add('vx');setTimeout(()=>{const y=scrollY;fn();l.style.height='auto';const nh=l.offsetHeight;l.style.height=old+'px';scrollTo(0,y);void l.offsetHeight;l.style.height=nh+'px';l.classList.remove('vx');setTimeout(()=>{l.style.height=''},500)},220)}
 function go(v){
   if(gb||v===cv)return;gb=true;
-  const box=$('#views'),o=$('#v-'+cv),n=$('#v-'+v);
-  if(cv==='home')$('#nav').classList.remove('f');
+  const box=$('#views'),o=$('#v-'+cv),n=$('#v-'+v),H=document.documentElement;
+  if(cv==='home'){$('#nav').classList.remove('f');H.classList.remove('lock')}
   box.style.height=box.offsetHeight+'px';o.classList.add('vx');window.scrollTo({top:0,behavior:'smooth'});
   setTimeout(()=>{
-    o.classList.add('hide');o.classList.remove('vx');
+    o.classList.add('hide');o.classList.remove('vx','ve');
     n.querySelectorAll('.a').forEach(e=>e.classList.remove('a'));
     n.classList.remove('hide');n.classList.add('ve');
-    box.style.height=n.offsetHeight+'px';cv=v;
-    setTimeout(()=>{n.classList.remove('ve');box.style.height='';gb=false},650);
+    cv=v;if(v==='cat')drawCat();if(v==='pct')drawPct();
+    box.style.height=n.offsetHeight+'px';
+    setTimeout(()=>{box.style.height='';gb=false;if(v==='home')H.classList.add('lock')},700);
+    setTimeout(()=>{if(cv===v)n.classList.remove('ve')},2500);
   },300);
 }
 document.addEventListener('click',e=>{const b=e.target.closest('[data-v]');if(b)go(b.dataset.v)});
-$('#all').onclick=()=>{full=!full;$('#all').textContent=full?'показать только за этот день':'посмотреть всю историю';$('#hcr').classList.toggle('on',full);swapList(list)};
+$('#all').onclick=()=>{full=!full;$('#all').textContent=full?'показать только за этот день':'посмотреть всю историю';swapList(list)};
 setTimeout(()=>$('#nav').classList.remove('f'),3200);
-function catsheet(){
-  const m=months[mi],cur=rows.filter(r=>key(r.d)===m&&r.type==='e'),cats={};cur.forEach(r=>cats[r.cat]=(cats[r.cat]||0)+r.v);
-  const ce=Object.entries(cats).sort((a,b)=>b[1]-a[1]),tot=ce.reduce((a,c)=>a+c[1],0);
-  let h='<h2>расходы по категориям</h2><p class="mu" style="text-align:left;padding:0 0 4px">'+MN[+m.split('-')[1]-1]+' '+m.split('-')[0]+', всего '+f(tot)+'</p>';
-  h+=ce.map(c=>{const w=tot?c[1]/tot*100:0;return `<div class="pr"><div class="pt"><span>${esc(cap(c[0]))}</span><b>${f(c[1])}</b></div><div class="bt"><div class="bf" data-w="${w}"></div></div><div class="mu" style="text-align:left;padding:5px 0 0;font-size:13px">${w.toFixed(1).replace('.',',')}% от расходов, чеков: ${cur.filter(r=>r.cat===c[0]).length}</div></div>`}).join('')||'<p class="mu">расходов нет</p>';
-  sheet(h);setTimeout(()=>document.querySelectorAll('.bf').forEach(e=>e.style.width=e.dataset.w+'%'),60);
-}
-$('#v-home .card').onclick=()=>{if(rows.length)catsheet()};
 if('serviceWorker' in navigator)navigator.serviceWorker.register('sw.js').catch(()=>{});
 </script>
 </body>
