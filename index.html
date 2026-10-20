@@ -161,8 +161,8 @@ main{padding-bottom:24px}
 .hero.gl{animation:up 0s forwards,glow 2s ease-out}
 .nl.gl{animation:nlg 2.4s ease-out}
 #v-home .cr{margin:0;flex:none}
-#ib{transition:opacity .35s ease,transform .5s cubic-bezier(.22,1,.36,1),background-color .15s}
-#ib.off{opacity:0;transform:scale(.6);pointer-events:none}
+#ib{flex:none;padding:0;min-width:0;transition:opacity .35s ease,transform .55s cubic-bezier(.22,1,.36,1),width .55s cubic-bezier(.22,1,.36,1),margin-left .55s cubic-bezier(.22,1,.36,1),background-color .15s}
+#ib.off{width:0;margin-left:-8px;opacity:0;transform:scale(.6);overflow:hidden;pointer-events:none}
 .chips{-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 16px,#000 calc(100% - 36px),transparent 100%);mask-image:linear-gradient(90deg,transparent 0,#000 16px,#000 calc(100% - 36px),transparent 100%)}
 #c4 svg{overflow:visible;animation:rg 2.4s ease-out .3s}
 @keyframes rg{0%{filter:drop-shadow(0 0 0 transparent)}40%{filter:drop-shadow(0 0 16px color-mix(in srgb,var(--ink) 55%,transparent))}100%{filter:drop-shadow(0 0 0 transparent)}}
